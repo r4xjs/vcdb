@@ -9,10 +9,9 @@ if(!isset($pi) || !is_numeric($pi)) {
     goAway();
 }
 
-if(!assert("(int)$pi = 3")) { 
+if(!assert("(int)$pi == 3")) {
     echo "This is not pi.";
 } else {
     echo "This might be pi.";
 }
 
-   
