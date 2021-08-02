@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:        5c19c5c7-0ff1-4e15-88a9-d6ee24e8d9f0
+:ROAM_REFS: https://web.archive.org/web/20190328023701/https://www.ripstech.com/php-security-calendar-2018/
+:END:
+#+title: rips-26
+#+filetags: :vcdb:php:nosolution:
+
+* Description
+
+* Code
+#+begin_src php
+function display_notifications() {
+
+    // get all posts with the post type amn_notification
+    $plugin_notifications = get_posts(
+    array(
+        'post_type' => 'amn_notification'
+    ));
+
+
+    foreach ( $plugin_notifications as $notification ) {
+        $dismissable = get_post_meta( $notification->ID, 'dismissable', true );
+        $type        = get_post_meta( $notification->ID, 'type', true );
+
+        $html = "<div class='notice-$type am-notification notice'>";
+        $html .= $notification->post_content;
+        $html .= "</div>";
+
+        echo $html;
+
+        }
+
+}
+
+#+end_src
+
+* Solution
+#+begin_src php
+
+#+end_src

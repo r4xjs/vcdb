@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:        58cc8204-38f1-40fe-bd1e-34930f7517e0
+:ROAM_REFS: https://blog.tracesec.xyz/2020/01/05/JavaSecCalendar2019-Writeup/
+:END:
+#+title: rips-10
+#+filetags: :vcdb:java:nosolution:
+
+* Description
+
+* Code
+#+begin_src java
+@RequestMapping("/webdav")
+  public void webdav(HttpServletResponse res, @RequestParam("name") String name) throws IOException {
+    res.setContentType("text/xml");
+    res.setCharacterEncoding("UTF-8");
+    PrintWriter pw = res.getWriter();
+    name = name.replace("]]", "");
+    pw.print("<person>");
+    pw.print("<name><![CDATA[" + name.replace(" ","") + "]]></name>");
+    pw.print("</person>");
+  }
+
+#+end_src
+
+* Solution
+#+begin_src java
+
+#+end_src

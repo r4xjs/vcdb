@@ -1,0 +1,63 @@
+:PROPERTIES:
+:ID:        5c982895-1550-4465-875c-66989a4f19f5
+:ROAM_REFS: https://twitter.com/ripstech/status/1104050392202018816
+:END:
+#+title: rips-40
+#+filetags: :vcdb:php:
+
+* Description
+
+* Code
+#+begin_src php
+class LanguageManager {
+    public function loadLanguage() {
+        $lang = $this->getBrowserLanuage();
+        $sanitizedLang = $this->sanitizeLanguage($lang);
+        require_once("/lang/$sanitizedlang");
+    }
+
+    private function getBrowserLanuage() {
+        $lang = $_SERVER['HTTP_ACCETPT_LANGUAGE'] ?? 'en';
+        return $lang;
+    }
+
+    private function sanitizeLanguage($language) {
+        return str_replace('../', '', $language);
+    }
+}
+(new LanguageManager())->loadLanguage();
+
+#+end_src
+
+* Solution
+#+begin_src php
+class LanguageManager {
+    public function loadLanguage() {
+        $lang = $this->getBrowserLanuage();
+        // 2) $lang is user input
+        $sanitizedLang = $this->sanitizeLanguage($lang);
+        // 4) file inclusion here
+        require_once("/lang/$sanitizedlang");
+    }
+
+    private function getBrowserLanuage() {
+        // 1) $lang is user input
+        $lang = $_SERVER['HTTP_ACCETPT_LANGUAGE'] ?? 'en';
+        return $lang;
+    }
+
+    private function sanitizeLanguage($language) {
+        // 3) is not recursive --> can be bypassed
+        return str_replace('../', '', $language);
+    }
+}
+(new LanguageManager())->loadLanguage();
+
+
+// example:
+// echo str_replace('../', '', 'aaa/../..././bbb');
+// aaa/../bbb
+
+
+
+#+end_src

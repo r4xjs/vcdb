@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:        9ea340dc-bf1f-4369-a12f-a26cc40367a0
+:ROAM_REFS: https://blog.tracesec.xyz/2020/01/05/JavaSecCalendar2019-Writeup/
+:END:
+#+title: rips-05
+#+filetags: :vcdb:java:nosolution:
+
+* Description
+
+* Code
+#+begin_src java
+import javax.servlet.http.HttpServletRequest;
+import java.util.Enumeration;
+
+public class Request {
+  public static String toString(HttpServletRequest req) {
+    StringBuilder sb = new StringBuilder();
+    String delimiter = req.getParameter("delim");
+    Enumeration<String> names = req.getParameterNames();
+    while (names.hasMoreElements()) {
+      String name = names.nextElement();
+      if (!name.equals("delim")) {
+        sb.append("<b>" + name + "</b>:<br>");
+        String[] values = req.getParameterValues(name);
+        for (String val : values) {
+          sb.append(val);
+          sb.append(delimiter);
+          sb.append("<br>");
+        }
+      }
+    }
+    return sb.toString();
+  }
+}
+
+#+end_src
+
+* Solution
+#+begin_src java
+
+#+end_src

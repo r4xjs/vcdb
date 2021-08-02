@@ -1,0 +1,72 @@
+:PROPERTIES:
+:ID:        8f87dae4-3327-43cb-8b3c-85d70a8387c4
+:ROAM_REFS: https://twitter.com/ripstech/status/1114181397470531584
+:END:
+#+title: rips-44
+#+filetags: :vcdb:php:
+
+* Description
+
+* Code
+#+begin_src php
+class Carrot {
+    const EXTERNAL_DIRECTORY = '/tmp/';
+    private $id;
+    private $lost = 0;
+    private $bought = 0;
+
+    public function __construct($input) {
+        $this->id = rand(1, 1000);
+
+        foreach($input as $field => $count) {
+            $this->$field = $count++;
+        }
+    }
+
+    public function __destruct() {
+        file_put_contents(
+            self::EXTERNAL_DIRECTORY . $this->id,
+            var_export(get_object_vars($this), true)
+        );
+    }
+}
+$carrot = new Carrot($_GET);
+
+#+end_src
+
+* Solution
+#+begin_src php
+class Carrot {
+    const EXTERNAL_DIRECTORY = '/tmp/';
+    private $id;
+    private $lost = 0;
+    private $bought = 0;
+
+    public function __construct($input) {
+        $this->id = rand(1, 1000);
+
+        foreach($input as $field => $count) {
+            // 2) overwrite arbitrary attributes with user input
+            $this->$field = $count++;
+        }
+    }
+
+    public function __destruct() {
+        file_put_contents(
+            // 3) $this->id can be user input (see 2)
+            //    therefore the first arguement ($filename) is vulnerable to
+            //    directory traversal
+            self::EXTERNAL_DIRECTORY . $this->id,
+            var_export(get_object_vars($this), true)
+        );
+    }
+}
+// 1) Carot constructor receives user input
+$carrot = new Carrot($_GET);
+
+
+// example:
+// $_GET = [ "id" => "../f00"];
+
+
+#+end_src

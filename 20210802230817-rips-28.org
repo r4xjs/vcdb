@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:        b8e052d2-a117-4ce5-a059-d0bcf62a70f3
+:ROAM_REFS: https://web.archive.org/web/20190328023701/https://www.ripstech.com/php-security-calendar-2018/
+:END:
+#+title: rips-28
+#+filetags: :vcdb:php:nosolution:
+
+* Description
+
+* Code
+#+begin_src php
+function get_option_html( $args ) {
+    $options = $args['options'];
+    $value = $args['value'];
+    switch($options['type']) {
+
+        case 'html':
+            $buf .= $value;
+            break;
+        case 'date':
+            wp_enqueue_script( 'jquery-ui-datepicker' );
+
+    }
+
+    return $buf;
+}
+
+$args = get_post_meta($post->ID, '_aioseop_opengraph');
+
+echo get_option_html($args);
+
+#+end_src
+
+* Solution
+#+begin_src php
+
+#+end_src

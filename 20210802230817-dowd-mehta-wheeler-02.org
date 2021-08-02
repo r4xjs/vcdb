@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:        986ba4c5-6b48-4b36-8698-e5bfe10bbb23
+:ROAM_REFS: https://www.blackhat.com/presentations/bh-europe-06/bh-eu-06-Wheeler-up.pdf
+:END:
+#+title: dowd-mehta-wheeler-02
+#+filetags: :vcdb:c:nosolution:
+
+* Description
+
+* Code
+#+begin_src c
+char blah[260], buf[256];
+sprintf(blah, "%s", "BLAH");
+recv(socket, buf, 256, 0);
+strncat(blah, buf, 256);
+
+#+end_src
+
+* Solution
+#+begin_src c
+
+#+end_src

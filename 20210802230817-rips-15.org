@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:        a4d62f3e-7e84-4c2a-af8c-6e40c625bb84
+:ROAM_REFS: https://blog.tracesec.xyz/2020/01/05/JavaSecCalendar2019-Writeup/
+:END:
+#+title: rips-15
+#+filetags: :vcdb:java:nosolution:
+
+* Description
+
+* Code
+#+begin_src java
+import org.apache.commons.io.IOUtils;
+import javax.servlet.http.*;
+import java.io.*;
+import java.util.*;
+
+public class FindOnSystem extends HttpServlet {
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    try {
+      String[] binary = {"find", ".", "-type", "d"};
+      ArrayList<String> cmd = new ArrayList<>(Arrays.asList(binary));
+
+      String[] options = request.getParameter("options").split(" ");
+      for (String i : options) {
+        cmd.add(i);
+      }
+
+      ProcessBuilder processBuilder = new ProcessBuilder(cmd);
+      Process process = processBuilder.start();
+      IOUtils.copy(process.getInputStream(),response.getOutputStream());
+    } catch(Exception e) {
+      response.sendRedirect("/");
+    }
+  }
+}
+
+#+end_src
+
+* Solution
+#+begin_src java
+
+#+end_src

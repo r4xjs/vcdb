@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:        a777c973-8a0c-4584-b069-8227e23b32a2
+:ROAM_REFS: https://web.archive.org/web/20190328023701/https://www.ripstech.com/php-security-calendar-2018/
+:END:
+#+title: rips-27
+#+filetags: :vcdb:php:nosolution:
+
+* Description
+
+* Code
+#+begin_src php
+public function do_ajax_product_import() {
+
+    $file = wc_clean( wp_unslash( $_POST['file'] ) );
+
+    $importer = WC_Product_CSV_Importer_Controller::get_importer( $file, $params );
+    $results = $importer->import();
+
+}
+
+public function import() {
+    if ( ! is_file( $this->file ) ) {
+        $this->add_error( __( 'The file does not exist, please try again.', 'woocommerce' ) );
+        return;
+    }
+
+}
+
+#+end_src
+
+* Solution
+#+begin_src php
+
+#+end_src

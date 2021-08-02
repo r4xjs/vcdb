@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:        22011e96-63fe-45a6-a85c-240688137c7e
+:ROAM_REFS: https://blog.tracesec.xyz/2020/01/05/JavaSecCalendar2019-Writeup/
+:END:
+#+title: rips-13
+#+filetags: :vcdb:java:nosolution:
+
+* Description
+
+* Code
+#+begin_src java
+import javax.servlet.http.*;
+import java.io.*;
+import java.util.List;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+public class UploadFileController extends HttpServlet {
+  protected void doPost(HttpServletRequest request,
+                        HttpServletResponse response) throws IOException {
+    DiskFileItemFactory factory = new DiskFileItemFactory();
+    factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
+    ServletFileUpload upload = new ServletFileUpload(factory);
+
+    String uploadPath = getServletContext().getRealPath("") + "upload";
+    File uploadDir = new File(uploadPath);
+    if (!uploadDir.exists()) {
+      uploadDir.mkdir();
+    }
+    try {
+      List<FileItem> items = upload.parseRequest(request);
+      if (items != null && items.size() > 0) {
+        for (FileItem item : items) {
+          if (!item.isFormField()) {
+            if (!(item.getContentType().equals("text/plain"))) {
+              throw new Exception("ContentType mismatch");
+            }
+            String file = uploadPath + File.separator + item.getName();
+            File storeFile = new File(file);
+            item.write(storeFile);
+          }
+        }
+      }
+    } catch (Exception ex) {
+      response.sendRedirect("/");
+    }
+  }
+}
+
+#+end_src
+
+* Solution
+#+begin_src java
+
+#+end_src
