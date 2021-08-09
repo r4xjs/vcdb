@@ -59,7 +59,7 @@ namespace core_api.Controllers
 {{< /code >}}
 
 # Solution
-{{< code language="csharp" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="csharp" highlight="26,34,36,40,41" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 using System;
 using System.Collections;
 using System.Globalization;

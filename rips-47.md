@@ -53,7 +53,7 @@ if(!$auth->isValid()) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="15,16,23-25,37" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class RealSecureLoginManager {
     private $em;
     private $user;

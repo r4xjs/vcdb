@@ -52,7 +52,7 @@ new FTP('localhost', 21, 'user', 'password');
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="10,16,28,29,36,37" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class FTP {
     public $sock;
 

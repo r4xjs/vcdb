@@ -42,7 +42,7 @@ class LessonsController6 extends ApiController {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="9,17-20,24" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Request;

@@ -45,7 +45,7 @@ $upload->do_upload();
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="7,21-24" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 {
     private $detect_mime = TRUE;
     private $type_regex = '/^([a-z\-]+\/[a-z0-9\-\.\+]+)(;\s.+)?$/';

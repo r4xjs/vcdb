@@ -28,7 +28,7 @@ class JWT {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="6-9,16" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class JWT {
     public function verifyToken($data, $signature) {
         $pub = openssl_pkey_get_public("file://pub_key.pem");

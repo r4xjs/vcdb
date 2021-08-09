@@ -50,7 +50,7 @@ class Template {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="11-14,26,34" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 // composer require "twig/twig"
 require 'vendor/autoload.php';
 

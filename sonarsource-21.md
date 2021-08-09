@@ -43,7 +43,7 @@ def get(business_id, table=None):
 {{< /code >}}
 
 # Solution
-{{< code language="python" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="python" highlight="9,17,18,20,25" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 import copy
 import io
 from http import HTTPStatus

@@ -39,7 +39,7 @@ class F00 {
 {{< /code >}}
 
 # Solution
-{{< code language="java" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="java" highlight="8,10,11,20" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class F00 {
     ...
     @RequestMapping(value = {"/api/adapter/{adapter}/activate/{b}"},

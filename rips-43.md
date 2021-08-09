@@ -53,7 +53,7 @@ if(!$auth->isValid()) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="9,10,14,21,30-33,40" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class LoginManager {
     private $em;
     private $user;

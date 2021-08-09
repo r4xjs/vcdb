@@ -98,7 +98,7 @@ func Unzip(src, dest string) ([]string, error) {
 {{< /code >}}
 
 # Solution
-{{< code language="go" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="go" highlight="15,31,46,69,70" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 package main
 
 import (

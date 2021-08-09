@@ -44,7 +44,7 @@ $storage->performAction($_GET(['action'], $_GET['data']);
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="22,24-26,32" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class TokenStorage {
     public function performAction($action, $data) {
         switch($action) {

@@ -53,20 +53,23 @@ new Template($_COOKIE['data']);
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="7,14,16,40" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class Template {
     public $cacheFile = '/tmp/cachefile';
     public $template = '<div>Welcome back %s</div>';
 
     public function __construct($data = null) {
-        $data = $this->loadData($data);                   // 2) user input $data
+		// 2) user input $data
+        $data = $this->loadData($data);
         $this->render($data);
     }
 
     public function loadData($data) {
         if(substr($data, 0, 2) !== 'O:'
-           && !preg_match('/O:\d:\/', $data)) {           // 3) this can be bypassed with ['name' => 'f00', 'obj' => new Template(...)]
-            return unserialize($data);                    // 4) user controlled data into unserialize
+			// 3) this can be bypassed with ['name' => 'f00', 'obj' => new Template(...)]
+           && !preg_match('/O:\d:\/', $data)) {
+			// 4) user controlled data into unserialize
+            return unserialize($data);
         }
         return [];
     }
@@ -89,7 +92,8 @@ class Template {
     }
 }
 
-new Template($_COOKIE['data']);     // 1) user input from cookie
+// 1) user input from cookie
+new Template($_COOKIE['data']);
 
 
 // example:

@@ -66,7 +66,7 @@ public class IndexServlet extends HttpServlet {
 {{< /code >}}
 
 # Solution
-{{< code language="java" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="java" highlight="19,26,29-32" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 package org.example;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;

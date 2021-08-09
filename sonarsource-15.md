@@ -60,7 +60,7 @@ class Authenticate{
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="28,29,33,42,43" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 <?php
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Response;

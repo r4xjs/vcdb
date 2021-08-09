@@ -63,7 +63,7 @@ class ZipUtils extends GenericServlet {
 {{< /code >}}
 
 # Solution
-{{< code language="java" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="java" highlight="17,20,21,31,35,46,47," title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.*;

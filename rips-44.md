@@ -39,7 +39,7 @@ $carrot = new Carrot($_GET);
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="12,19-21,27" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class Carrot {
     const EXTERNAL_DIRECTORY = '/tmp/';
     private $id;

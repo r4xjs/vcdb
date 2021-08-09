@@ -40,7 +40,7 @@ class Sitemap():
 {{< /code >}}
 
 # Solution
-{{< code language="python" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="python" highlight="9,13,14,16,27,28" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 import os
 import requests
 import errno

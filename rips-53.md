@@ -56,7 +56,7 @@ if(isset($_GET["u"]) && isset($_GET["p"])) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="21,22,28,38" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class LDAPAuthenticator {
     public $conn;
     public $host;
@@ -76,12 +76,15 @@ class LDAPAuthenticator {
         if(!@ldap_bind($this->conn))
             return -1;
 
-        $user = ldap_escape($user, null, LDAP_ESCAPE_DN);       // 2) LDAP_ESCAPE_DN should be replaced to LDAP_ESCAPE_FILTER
-        $pass = ldap_escape($pass, null, LDAP_ESCAPE_DN);       //    because $user and $pass are used in ldap_search in the filter argument
+		// 2) LDAP_ESCAPE_DN should be replaced to LDAP_ESCAPE_FILTER
+		//    because $user and $pass are used in ldap_search in the filter argument
+        $user = ldap_escape($user, null, LDAP_ESCAPE_DN);
+        $pass = ldap_escape($pass, null, LDAP_ESCAPE_DN);
         $result = ldap_search(
             $this->conn,
             "",
-            "(&(uid=$user)(userPassword=$pass))"                // 3) ldap injection here
+			// 3) ldap injection here
+            "(&(uid=$user)(userPassword=$pass))"
         );
         $result = ldap_get_entries($this->conn, $result);
         return ($result["count"] > 0 ? 1 : 0);
@@ -90,7 +93,8 @@ class LDAPAuthenticator {
 
 if(isset($_GET["u"]) && isset($_GET["p"])) {
     $ldap = new LDAPAuthenticator();
-    if($ldap->authenticate($_GET["u"], $_GET["p"])) {            // 1) u and p = user input
+	// 1) u and p = user input
+    if($ldap->authenticate($_GET["u"], $_GET["p"])) {
         echo "You are now logged in !";
     } else {
         echo "Username or password unkonwn!";

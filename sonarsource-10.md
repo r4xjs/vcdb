@@ -52,7 +52,7 @@ class RegisterView(CreateView):
 {{< /code >}}
 
 # Solution
-{{< code language="python" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="python" highlight="26,30" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 from django.contrib import auth, messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render

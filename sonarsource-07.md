@@ -34,7 +34,7 @@ public function index(Request $request) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="8-11,19,22" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 private DOMDocument $doc;
 private $authFile = 'employees.xml';
 

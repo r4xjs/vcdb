@@ -40,7 +40,7 @@ echo '<h1>'.htmlspecialchars($currentuser).'</h1>';
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="3,7,23,26" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 function getUser($id) {
     // 3) $config and $db can be user input from parse_str
     global $config, $db;

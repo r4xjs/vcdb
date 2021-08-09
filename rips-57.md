@@ -30,18 +30,21 @@ foreach($_GET as $regex => $value) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="6,8,15" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 header("Content-Type: text/plain");
 
 function complexStrtolower($regex, $value) {
     return preg_replace(
-        '/(' . $regex . ')/ei',                   // 2) regex modifier 'e' is used for evaluation
-        'strtolower("\\1")',                      // 3) php funciton is called with back reference, code exec here
+		// 2) regex modifier 'e' is used for evaluation
+        '/(' . $regex . ')/ei',
+		// 3) php funciton is called with back reference, code exec here
+        'strtolower("\\1")',
         $value
     );
 }
 
-foreach($_GET as $regex => $value) {              // 1) $regex and $value = user input
+foreach($_GET as $regex => $value) {
+	// 1) $regex and $value = user input
     echo complexStrtolower($regex, $value) . "\n";
 }
 

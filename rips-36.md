@@ -37,7 +37,7 @@ new Login($_POST(['username'], $_POST['password']);
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="8-10,18,25" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class Login {
     public function __construct($user, $pass) {
         $this->loginViaXml($user, $pass);

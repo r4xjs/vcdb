@@ -27,7 +27,7 @@ echo $google_analytics;
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="2,8" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 // 1) $page has user input
 $page = 'extensions/' . $_GET['extension'];
 $google_analytics = "&lt;script type='text/javascript'>";

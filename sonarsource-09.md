@@ -35,7 +35,7 @@ def form_valid(self, form):
 {{< /code >}}
 
 # Solution
-{{< code language="python" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="python" highlight="3,6-8" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 def get_addon_path(self):
     # 1) `filename` and `tmp_token` is user input
     filename = os. path.basename(self.request.GET.get("my_file"))

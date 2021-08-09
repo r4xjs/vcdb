@@ -40,14 +40,14 @@ if($_GET['redirect']) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="6,8,18,26" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class Redirect {
     private $websiteHost = 'www.example.com';
 
     private function setHeaders($url) {
-        // $url = user input gets url decoded
+        // 3) $url = user input gets url decoded
         $url = urldecode($url);
-        // html header injection here if %0d%0a is used in params
+        // 4) html header injection here if %0d%0a is used in params
         header("Locatoin: $url");
     }
 
@@ -65,7 +65,7 @@ class Redirect {
 }
 
 if($_GET['redirect']) {
-    // params is user input
+    // 1) params is user input
     (new Redirect())->startRedirect($_GET['params']);
 }
 

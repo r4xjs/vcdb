@@ -48,7 +48,7 @@ class HomeController {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="3,7,11,13" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 function __autoload($className) {
     // 3) user controlled file inclusion ($controllerName == $_GET['c'])
     include $className;

@@ -52,7 +52,7 @@ $mailer->send($_POST);
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="4-6,34,39" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class Mailer {
     private function sanitize($email) {
         // 2) $email is user input. this filter is not 

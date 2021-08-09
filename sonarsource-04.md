@@ -47,7 +47,7 @@ namespace Core31Demo.Controllers
 {{< /code >}}
 
 # Solution
-{{< code language="csharp" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="csharp" highlight="10,20,34,35" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 // Controllers/HomeController.cs
 using System.Threading.Tasks;
 

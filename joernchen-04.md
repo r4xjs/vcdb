@@ -30,7 +30,7 @@ for line in fileinput.input():
 {{< /code >}}
 
 # Solution
-{{< code language="python" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="python" highlight="8,9,14-16" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 import re
 import os
 import fileinput

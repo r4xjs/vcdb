@@ -26,7 +26,7 @@ end
 {{< /code >}}
 
 # Solution
-{{< code language="ruby" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="ruby" highlight="6-8," title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 # coding: utf-8
 require 'sinatra'
 

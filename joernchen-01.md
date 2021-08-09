@@ -28,7 +28,7 @@ end
 {{< /code >}}
 
 # Solution
-{{< code language="ruby" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="ruby" highlight="3,5,8-14" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 def grep(query, options={})
   # 1) assume that query and options is user input
   ref = options[:ref] ? options[:ref] : "HEAD"

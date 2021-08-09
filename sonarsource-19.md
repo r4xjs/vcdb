@@ -38,7 +38,7 @@ if ('restore' == $_GET['action']) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="8,20-23,26" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 <?php
 if ('restore' == $_GET['action']) {
     $upload = $_FILES['filename'];

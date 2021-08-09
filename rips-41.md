@@ -34,7 +34,7 @@ if(!assert("(int)$pi == 3")) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="2,8,11,16" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 // 1) user input can overwrit arbitrary vars
 extract($_POST);
 

@@ -42,7 +42,7 @@ function set_screen_options() {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="5,16,17,23,24" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 function set_screen_options() {
 
     $user = wp_get_current_user();

@@ -35,7 +35,7 @@ public HttpResponseMessage GetAvatar(string image) {
 {{< /code >}}
 
 # Solution
-{{< code language="csharp" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="csharp" highlight="5-7,19,23" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 ...
 [HttpGet]
 public HttpResponseMessage GetAvatar(string image) {

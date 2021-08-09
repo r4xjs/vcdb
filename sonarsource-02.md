@@ -40,13 +40,14 @@ public class IndexServlet extends HttpServlet {
 {{< /code >}}
 
 # Solution
-{{< code language="java" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="java" highlight="7,22" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 public class IndexServlet extends HttpServlet {
     private String referer;
     private ExportIcalManager exportManager;
     private void exportIcal(HttpServletResponse res, String sessionId)
             throws ServletException, IOException {
-	res.addHeader("Access-Control-Allow-Origin", referer);       // 2) referer is used to allow arbitrary origins
+	// 2) referer is used to allow arbitrary origins
+	res.addHeader("Access-Control-Allow-Origin", referer);
         res.setContentType("text/plain");
         ExportIcalManager exportManager = new ExportIcalManager(sessionId);
         String filePath = exportManager.exportIcalAgendaForSynchro();
@@ -59,9 +60,10 @@ public class IndexServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
-        HttpSession session = req.getSession();
-	referer = req.getParameter("referer");                       // 1) referer is user input
-	exportIcal(res, req.getRequestedSessionId());
+		HttpSession session = req.getSession();
+		// 1) referer is user input
+		referer = req.getParameter("referer");
+		exportIcal(res, req.getRequestedSessionId());
     }
 }
 

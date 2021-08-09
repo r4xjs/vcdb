@@ -53,7 +53,7 @@ public class IndexServlet {
 {{< /code >}}
 
 # Solution
-{{< code language="java" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="java" highlight="22,26,32,36" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;

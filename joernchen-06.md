@@ -70,7 +70,7 @@ public class StringStuff {
 {{< /code >}}
 
 # Solution
-{{< code language="java" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="java" highlight="8,9,15-18,33,39,47-51,64" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 import java.io.*;
 
 public class StringStuff {

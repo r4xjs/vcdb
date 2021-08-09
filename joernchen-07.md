@@ -47,7 +47,7 @@ if ($_POST['html']) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="13,14,20,26,27" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 <?php
 // include autoloader
 require_once 'dompdf/autoload.inc.php';

@@ -31,7 +31,7 @@ end
 {{< /code >}}
 
 # Solution
-{{< code language="ruby" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="ruby" highlight="11-14" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 def check
   fullpath = request.path_info
   hmaced = "#{params[:email]}/#{params[:expire]}/"

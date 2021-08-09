@@ -33,7 +33,7 @@ if(!isset($_COOKIE['hash'])) {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="14,15" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 if(isset($_POST['password'])) {
     setcookie('hash', md5($_POST['password'])); 
     header("Refresh: 0");
@@ -45,8 +45,11 @@ if(!isset($_COOKIE['hash'])) {
     echo '<form><input type="password" name="password" />'
         . '<input type="submit" value="Login"></form>';
     exit;
-} elseif(md5($_COOKIE['hash']) == $password) {              // 1) hash is user input. php type juggling
-    echo 'Login successed';                                 //    will increase collisions and can be used to pass the check
+
+// 1) hash is user input. php type juggling
+//    will increase collisions and can be used to pass the check
+} elseif(md5($_COOKIE['hash']) == $password) {
+    echo 'Login successed';                   
 } else {
     echo 'Login failed';
 }

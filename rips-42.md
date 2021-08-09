@@ -31,7 +31,7 @@ echo "<a href='/images/sized.php?" .
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="4,5,16" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 $sanitized = [];
 
 // 1) The key and value of sanitized is user input

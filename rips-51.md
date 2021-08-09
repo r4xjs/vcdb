@@ -50,21 +50,26 @@ system('resizeImg image.png ' . $cmd);
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="10-13,19,34,35,40,42" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 declare(strict_types=1);
 
 class ParamExractor {
     private $validIndices = [];
 
     public function indices($input) {
-        $validate = function (int $value, $key) {            // 3) $value and $key is user input
-            if($value > 0) {                                 //    the type check is vulnerable against php type juggling
-                $this->validIndices[] = $key;                //    in php version < 8.0
+	
+        $validate = function (int $value, $key) {
+			// 3) $value and $key is user input                         	
+			//    the type check is vulnerable against php type juggling	
+			//    in php version < 8.0                                  	
+            if($value > 0) {
+                $this->validIndices[] = $key;
             }
         };
 
         try {
-            array_walk($input, $validate, 0);                // 2) $input is user input
+			// 2) $input is user input
+            array_walk($input, $validate, 0);
         } catch (TypeError $error) {
             echo "Only numbers are allowed as input";
         }
@@ -78,12 +83,16 @@ class ParamExractor {
         foreach ($indices as $index) {
             $params[] = $parameters[$index];
         }
-        return implode($params, ' ');                        // 4) the $params array can have arbitrary strings because of
-    }                                                        //    the type juggling problem above
+		// 4) the $params array can have arbitrary strings because of	
+		//    the type juggling problem above                        	
+        return implode($params, ' ');
+    }
 }
 
-$cmd = (new ParamExractor())->getCommand($_GET['p']);        // 1) argument to getCommand is user input
-system('resizeImg image.png ' . $cmd);                       // 5) os command injection here
+// 1) argument to getCommand is user input
+$cmd = (new ParamExractor())->getCommand($_GET['p']);
+// 5) os command injection here
+system('resizeImg image.png ' . $cmd);
 
 
 

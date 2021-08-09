@@ -32,7 +32,7 @@ echo $js_code;
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="3,6,7,17,18" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 if (!empty( $_GET['date'])) {
     // 1) dates is user input
     $dates = explode('-', $_GET['date']);

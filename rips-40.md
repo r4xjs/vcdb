@@ -34,7 +34,7 @@ class LanguageManager {
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="5,7,12,18" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class LanguageManager {
     public function loadLanguage() {
         $lang = $this->getBrowserLanuage();

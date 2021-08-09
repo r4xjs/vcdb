@@ -43,7 +43,7 @@ echo (new ImageViewer("image.png"));
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="11,12,15,18,22" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 class ImageViewer {
     private $file;
 
