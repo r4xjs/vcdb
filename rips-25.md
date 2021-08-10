@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+A nice implementation of a password check in PHP.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1200434742815907840" >}}

@@ -6,7 +6,9 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+Part of the RIPS WordPress Plugin Security Challenges.
+IMO not so easy challenge and also only exploitable under some
+assumptions.
 
 <!--more-->
 {{< reference src="https://web.archive.org/web/20190328023701/https://www.ripstech.com/php-security-calendar-2018/" >}}

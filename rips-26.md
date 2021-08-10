@@ -6,7 +6,8 @@ tags: [php, nosolution]
 
 ---
 
-$DESCRIPTION
+Part of the RIPS WordPress Plugin Security Challenges. This code
+shows some notification to the user.
 
 <!--more-->
 {{< reference src="https://web.archive.org/web/20190328023701/https://www.ripstech.com/php-security-calendar-2018/" >}}

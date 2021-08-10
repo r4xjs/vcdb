@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+Provides PDF generation of user supplied input.
 
 <!--more-->
 {{< reference src="https://code-audit-training.gitlab.io/" >}}
