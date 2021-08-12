@@ -80,7 +80,7 @@ public class UserController extends HttpServlet {
 {{< /code >}}
 
 # Solution
-{{< code language="java" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="java" highlight="34,42,43,60" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 import javax.naming.*;
 import javax.naming.directory.*;
 import java.util.*;
