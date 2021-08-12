@@ -2,7 +2,7 @@
 
 title: rips-03
 author: raxjs
-tags: [java, nosolution]
+tags: [java]
 
 ---
 
