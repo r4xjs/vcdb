@@ -8,7 +8,7 @@ tags: [c,real]
 
 This is was a vulnerability in the OpenBSD ftpd deamon. 
 
-[[https://nvd.nist.gov/vuln/detail/CVE-2001-0053][CVE-2001-0053]]
+[CVE-2001-0053](https://nvd.nist.gov/vuln/detail/CVE-2001-0053)
 
 <!--more-->
 {{< reference src="http://www.blackhat.com/presentations/bh-usa-02/bh-us-02-iss-sourceaudit.ppt" >}}
