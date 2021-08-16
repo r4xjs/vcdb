@@ -32,7 +32,7 @@ HANDLE GetRequestedFile(LPCSTR requestedFile){
 {{< /code >}}
 
 # Solution
-{{< code language="c" highlight="2,3,7-10" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="c" highlight="3,4,8-11" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 HANDLE GetRequestedFile(LPCSTR requestedFile){
   // 1) requestedFile can still contain the absolute path
   //    to "break out" of the current directory
