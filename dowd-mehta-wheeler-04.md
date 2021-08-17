@@ -33,7 +33,7 @@ BOOL LoadProfile(LPCSTR UserName) {
 {{< /code >}}
 
 # Solution
-{{< code language="c" highlight="13,15" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="c" highlight="13-15" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 char *ProfileDirectory = "c:\profiles";
 
 BOOL LoadProfile(LPCSTR UserName) {
