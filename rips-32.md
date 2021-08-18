@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+Google analytics... you are doing it wrong.
 
 <!--more-->
 {{< reference src="https://web.archive.org/web/20190328023701/https://www.ripstech.com/php-security-calendar-2018/" >}}

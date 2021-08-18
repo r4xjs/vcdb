@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+A PHP Token Storage with md5 support, md5 is not the (only) issue here.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1096479505328287747" >}}

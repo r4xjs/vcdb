@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+PHP Twig template.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1083770519256616960" >}}

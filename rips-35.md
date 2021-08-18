@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+PHP HOME-CONTROL-ler is comming soon.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1086316035672657920" >}}

@@ -6,13 +6,14 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+PHP login via XML.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1091412366896566272" >}}
 
 # Code
 {{< code language="php"  title="Challenge" expand="Show" collapse="Hide" isCollapsed="false" >}}
+<?php
 class Login {
     public function __construct($user, $pass) {
         $this->loginViaXml($user, $pass);
@@ -33,11 +34,12 @@ class Login {
     }
 }
 new Login($_POST(['username'], $_POST['password']);
-
+?>
 {{< /code >}}
 
 # Solution
-{{< code language="php" highlight="8-10,18,25" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="php" highlight="9-11,19,26" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+<?php
 class Login {
     public function __construct($user, $pass) {
         $this->loginViaXml($user, $pass);
@@ -63,7 +65,7 @@ class Login {
 }
 // 1) Login receives two parameter with user input
 new Login($_POST(['username'], $_POST['password']);
-
+?>
 
 
 // var_dump(!strpos("<bcd", '<') == true);
