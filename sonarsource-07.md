@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+Authenticating employees from an XML file.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1334527819402145792" >}}

@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+Sending E-Mails in PHP.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1154752480611373058" >}}

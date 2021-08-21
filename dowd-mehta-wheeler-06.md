@@ -42,7 +42,7 @@ void processing_thread_entrypoint() {
 {{< /code >}}
 
 # Solution
-{{< code language="c" highlight="2,7,9,24-28" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="c" highlight="2,7,9,24-27" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 // 1) global request variable
 request * head;
 void server_thread() {

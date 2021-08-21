@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+The PHP ImageLoader class.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1129417038974164992" >}}

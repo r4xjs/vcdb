@@ -6,7 +6,7 @@ tags: [python]
 
 ---
 
-$DESCRIPTION
+RegisterView from a django web app.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1333803048599121921" >}}

@@ -6,7 +6,7 @@ tags: [java]
 
 ---
 
-$DESCRIPTION
+Checking user input in java, do you see what can go wrong?
 
 <!--more-->
 {{< reference src="https://code-audit-training.gitlab.io/" >}}
