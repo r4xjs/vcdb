@@ -95,7 +95,7 @@ public class MainController{
       // 3) $controller and $task is directly or indirectly controlled by the user.
       //    We can create:
       //        Object controller = $CLASS;
-      //        controller.$TASK()
+      //        controller.$TASK(arg)
       //    where the name of $CLASS and $TASK is under user control
       controller.getClass().getMethod(task).invoke(controller);
     } catch (Exception e1) {
