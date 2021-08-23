@@ -6,7 +6,7 @@ tags: [java]
 
 ---
 
-$DESCRIPTION
+Java Servelet that can explort ical files.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1393100930124554242" >}}

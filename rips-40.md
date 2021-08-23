@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+A nice LanguageManger class in PHP.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1104050392202018816" >}}

@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+You know it is real when the class is named RealSecureLoginManager.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1121800350896230401" >}}

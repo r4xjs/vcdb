@@ -6,7 +6,7 @@ tags: [python]
 
 ---
 
-$DESCRIPTION
+Implementation of a Django Sitemap Class.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1338151696439107584" >}}
