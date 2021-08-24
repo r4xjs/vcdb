@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+Awesom PHP file upload implementation.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1395710975194460163" >}}

@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+PHP code with hacking protection.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1106525198851948545" >}}

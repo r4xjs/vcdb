@@ -6,7 +6,7 @@ tags: [java]
 
 ---
 
-$DESCRIPTION
+Importing odt files in Java.
 
 <!--more-->
 {{< reference src="https://blog.tracesec.xyz/2020/01/05/JavaSecCalendar2019-Writeup/" >}}

@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+Extracting parameter with ParameterExtractor in PHP.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1131863413561315328" >}}
@@ -15,7 +15,7 @@ $DESCRIPTION
 {{< code language="php"  title="Challenge" expand="Show" collapse="Hide" isCollapsed="false" >}}
 declare(strict_types=1);
 
-class ParamExractor {
+class ParamExtractor {
     private $validIndices = [];
 
     public function indices($input) {
@@ -35,7 +35,7 @@ class ParamExractor {
     }
 
     public function getCommand($parameters) {
-        $indices = $this-.indices($parameters);
+        $indices = $this->indices($parameters);
         $params = [];
         foreach ($indices as $index) {
             $params[] = $parameters[$index];
@@ -44,7 +44,7 @@ class ParamExractor {
     }
 }
 
-$cmd = (new ParamExractor())->getCommand($_GET['p']);
+$cmd = (new ParamExtractor())->getCommand($_GET['p']);
 system('resizeImg image.png ' . $cmd);
 
 {{< /code >}}
@@ -53,7 +53,7 @@ system('resizeImg image.png ' . $cmd);
 {{< code language="php" highlight="10-13,19,34,35,40,42" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 declare(strict_types=1);
 
-class ParamExractor {
+class ParamExtractor {
     private $validIndices = [];
 
     public function indices($input) {
@@ -90,7 +90,7 @@ class ParamExractor {
 }
 
 // 1) argument to getCommand is user input
-$cmd = (new ParamExractor())->getCommand($_GET['p']);
+$cmd = (new ParamExtractor())->getCommand($_GET['p']);
 // 5) os command injection here
 system('resizeImg image.png ' . $cmd);
 
@@ -99,7 +99,7 @@ system('resizeImg image.png ' . $cmd);
 
 # example:
 
-var_dump((new ParamExractor())->getCommand(array(1, 2, "1 ;cat /etc/passwd")));
+var_dump((new ParamExtractor())->getCommand(array(1, 2, "1 ;cat /etc/passwd")));
 #PHP Notice:  A non well formed numeric value encountered in php shell code on line 7
 #string(22) "1 2 1 ;cat /etc/passwd"
 
