@@ -6,7 +6,7 @@ tags: [csharp]
 
 ---
 
-$DESCRIPTION
+Showing an Avatar in c#.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1334890204843347969" >}}

@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+The LDAPAuthenticator left the building.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1137012839896539136" >}}

@@ -6,7 +6,7 @@ tags: [python]
 
 ---
 
-$DESCRIPTION
+This python code has it all: database, json, zip files and a flask Blueprint.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1339586153545150464" >}}

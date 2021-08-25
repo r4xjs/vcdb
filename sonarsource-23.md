@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+The LessonsController6.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1340326027206209539" >}}
