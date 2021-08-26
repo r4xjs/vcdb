@@ -6,7 +6,7 @@ tags: [ruby]
 
 ---
 
-$DESCRIPTION
+Some crypto code in ruby.
 
 <!--more-->
 {{< reference src="https://code-audit-training.gitlab.io/" >}}

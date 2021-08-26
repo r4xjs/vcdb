@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+A SQL based LoginManager in PHP
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1111661040482373633" >}}

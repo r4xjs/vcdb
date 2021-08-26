@@ -6,7 +6,7 @@ tags: [csharp]
 
 ---
 
-$DESCRIPTION
+Importing exchange data the good way.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1339226778477285376" >}}

@@ -6,7 +6,7 @@ tags: [java]
 
 ---
 
-$DESCRIPTION
+Java Servlet to zip some stuff.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1337064532355633152" >}}
