@@ -2,11 +2,11 @@
 
 title: rips-05
 author: raxjs
-tags: [java, nosolution]
+tags: [java]
 
 ---
 
-$DESCRIPTION
+Java Servlet toString implementation.
 
 <!--more-->
 {{< reference src="https://blog.tracesec.xyz/2020/01/05/JavaSecCalendar2019-Writeup/" >}}
@@ -40,6 +40,32 @@ public class Request {
 {{< /code >}}
 
 # Solution
-{{< code language="java" highlight="" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="java" highlight="7,14,24,25" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+import javax.servlet.http.HttpServletRequest;
+import java.util.Enumeration;
 
+public class Request {
+  public static String toString(HttpServletRequest req) {
+    // 1) $req is user input
+    StringBuilder sb = new StringBuilder();
+    String delimiter = req.getParameter("delim");
+    Enumeration<String> names = req.getParameterNames();
+    while (names.hasMoreElements()) {
+      String name = names.nextElement();
+      if (!name.equals("delim")) {
+        // 2) building up a string that contains user input
+        sb.append("<b>" + name + "</b>:<br>");
+        String[] values = req.getParameterValues(name);
+        for (String val : values) {
+          sb.append(val);
+          sb.append(delimiter);
+          sb.append("<br>");
+        }
+      }
+    }
+    // 3) if the returned string is used in the clients browser
+    //    then xss is possible
+    return sb.toString();
+  }
+}
 {{< /code >}}
