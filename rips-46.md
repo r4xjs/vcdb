@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+A PHP FTP class.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1120702868825055232" >}}

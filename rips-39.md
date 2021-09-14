@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+Getting user infos via MySQL.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1099020750072176640" >}}

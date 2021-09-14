@@ -6,7 +6,7 @@ tags: [java]
 
 ---
 
-$DESCRIPTION
+Java Servlet installRepository.
 
 <!--more-->
 {{< reference src="https://twitter.com/SonarSource/status/1338514090755440641" >}}

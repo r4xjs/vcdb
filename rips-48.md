@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+JWT token verification.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1124325237967994880" >}}

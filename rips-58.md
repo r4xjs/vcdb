@@ -6,7 +6,7 @@ tags: [php]
 
 ---
 
-$DESCRIPTION
+Welcome back cachefile.
 
 <!--more-->
 {{< reference src="https://twitter.com/ripstech/status/1169997998924980224" >}}
