@@ -212,7 +212,7 @@ $tmpl->display('support.tpl');
 
 ## /f00/bin/start_ssh_support_tunnel:
 
-{{< code language="shell" highlight="14,54-59" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
+{{< code language="shell" highlight="15,55-60" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 if [[ ! -z "$ssh_password" ]]; then
 	# we use this script to output the exported $ssh_password variable for the SSH_ASKPASS env var to ssh
 	echo "$ssh_password" 
