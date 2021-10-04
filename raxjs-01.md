@@ -12,7 +12,8 @@ Customer support feature, based on a vulnerability found in the wild.
 
 # Code
 
-## support.php
+support.php
+
 {{< code language="php"  title="Challenge" expand="Show" collapse="Hide" isCollapsed="false" >}}
 <?php
 require_once 'config.inc';
@@ -80,7 +81,7 @@ $tmpl->display('support.tpl');
 
 {{< /code >}}
 
-## /f00/bin/start_ssh_support_tunnel
+/f00/bin/start_ssh_support_tunnel
 
 {{< code language="shell"  title="Challenge" expand="Show" collapse="Hide" isCollapsed="false" >}}
 if [[ ! -z "$ssh_password" ]]; then
@@ -144,7 +145,8 @@ exit 0
 
 # Solution
 
-## support.php
+support.php
+
 {{< code language="php" highlight="17,34,35" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 <?php
 require_once 'config.inc';
@@ -208,7 +210,7 @@ if (($_REQUEST['f00_support_submit'] == 1) && checkCSRFToken('support:start') &&
 $tmpl->display('support.tpl');
 {{< /code >}}
 
-## /f00/bin/start_ssh_support_tunnel:
+/f00/bin/start_ssh_support_tunnel:
 
 {{< code language="shell" highlight="14,54-59" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 if [[ ! -z "$ssh_password" ]]; then
