@@ -12,7 +12,7 @@ Customer support feature, based on a vulnerability found in the wild.
 
 # Code
 
-support.php
+## support.php
 
 {{< code language="php"  title="Challenge" expand="Show" collapse="Hide" isCollapsed="false" >}}
 <?php
@@ -81,7 +81,7 @@ $tmpl->display('support.tpl');
 
 {{< /code >}}
 
-/f00/bin/start_ssh_support_tunnel
+## /f00/bin/start_ssh_support_tunnel
 
 {{< code language="shell"  title="Challenge" expand="Show" collapse="Hide" isCollapsed="false" >}}
 if [[ ! -z "$ssh_password" ]]; then
@@ -145,7 +145,7 @@ exit 0
 
 # Solution
 
-support.php
+## support.php
 
 {{< code language="php" highlight="17,34,35" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 <?php
@@ -210,7 +210,7 @@ if (($_REQUEST['f00_support_submit'] == 1) && checkCSRFToken('support:start') &&
 $tmpl->display('support.tpl');
 {{< /code >}}
 
-/f00/bin/start_ssh_support_tunnel:
+## /f00/bin/start_ssh_support_tunnel:
 
 {{< code language="shell" highlight="14,54-59" title="Solution" expand="Show" collapse="Hide" isCollapsed="true" >}}
 if [[ ! -z "$ssh_password" ]]; then
@@ -271,7 +271,7 @@ export SSH_ASKPASS="$0"
 #    The vulnerability could be exploited via "22 -o ProxyCommand=...." to
 #    gain RCE.
 #    Additionally in combination with the "hidden" feature an attacker could bind
-#    a socks porxy to an attacker controlled server via $port_to_connect_to="22 -R 8888"
+
 ssh -f "support@$host" -p $port_to_connect_to -R "$port:localhost:22" -q -o "UserKnownHostsFile /dev/null" -o "NumberOfPasswordPrompts 1" -o "StrictHostKeyChecking no" sleep 600
 
 exit 0
